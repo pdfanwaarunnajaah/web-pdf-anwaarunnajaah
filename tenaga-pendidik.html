@@ -109,6 +109,11 @@
         border-radius: 30px;
         padding: 10px 25px;
       }
+
+      .table th {
+        background: #00bfa6;
+        color: white;
+      }
     </style>
   </head>
 
@@ -129,27 +134,51 @@
         <button class="filter-btn active" onclick="filterGuru('all')">
           Semua
         </button>
-        <button class="filter-btn" onclick="filterGuru('quran')">
-          Al-Qur'an
+        <button class="filter-btn" onclick="filterGuru('Pengajar Ulya')">
+          Pengajar Ulya
         </button>
-        <button class="filter-btn" onclick="filterGuru('arab')">
-          Bahasa Arab
+        <button class="filter-btn" onclick="filterGuru('Pengajar Wustha')">
+          Pengajar Wustha
         </button>
-        <button class="filter-btn" onclick="filterGuru('turats')">
+        <!-- <button class="filter-btn" onclick="filterGuru('turats')">
           Kitab Turats
         </button>
+        -->
       </div>
 
       <div class="row" id="guruList">
         <!-- GURU -->
 
-        <div class="col-md-4 mb-4 guru-item turats">
+        <div class="col-md-4 mb-4 guru-item Pengajar Ulya">
           <div
             class="guru-card"
             onclick="
               showDetail(
                 'Abah KH. Ahmad Ashif Dahri',
                 'Pengajar Kitab Turats dan Umum',
+                {
+                  Senin: ['Nahwu (1)', 'Fiqih (2)', 'Shorof (1)', 'Hadits (3)'],
+                  Selasa: [
+                    'Tafsir (2)',
+                    'Nahwu (1)',
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                  ],
+                  Rabu: ['Shorof (1)', 'Hadits (3)', 'Tafsir (2)', 'Nahwu (1)'],
+                  Kamis: [
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                    'Nahwu (1)',
+                    'Shorof (1)',
+                  ],
+                  Jumat: ['Hadits (3)', 'Tafsir (2)', 'Fiqih (2)', 'Nahwu (1)'],
+                  Sabtu: [
+                    'Bahasa Arab (1)',
+                    'Shorof (1)',
+                    'Hadits (3)',
+                    'Tafsir (2)',
+                  ],
+                },
               )
             "
           >
@@ -161,13 +190,36 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item turats">
+        <div class="col-md-4 mb-4 guru-item Pengajar Ulya">
           <div
             class="guru-card"
             onclick="
               showDetail(
                 'Abah K. Itmamul Hamdi',
                 'Pengajar Kitab Turats dan Umum',
+                {
+                  Senin: ['Nahwu (1)', 'Fiqih (2)', 'Shorof (1)', 'Hadits (3)'],
+                  Selasa: [
+                    'Tafsir (2)',
+                    'Nahwu (1)',
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                  ],
+                  Rabu: ['Shorof (1)', 'Hadits (3)', 'Tafsir (2)', 'Nahwu (1)'],
+                  Kamis: [
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                    'Nahwu (1)',
+                    'Shorof (1)',
+                  ],
+                  Jumat: ['Hadits (3)', 'Tafsir (2)', 'Fiqih (2)', 'Nahwu (1)'],
+                  Sabtu: [
+                    'Bahasa Arab (1)',
+                    'Shorof (1)',
+                    'Hadits (3)',
+                    'Tafsir (2)',
+                  ],
+                },
               )
             "
           >
@@ -179,13 +231,36 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item turats">
+        <div class="col-md-4 mb-4 guru-item Pengajar Ulya">
           <div
             class="guru-card"
             onclick="
               showDetail(
                 'Abah K. Abdur Rosyid Karim',
                 'Pengajar Kitab Turats dan Umum',
+                {
+                  Senin: ['Nahwu (1)', 'Fiqih (2)', 'Shorof (1)', 'Hadits (3)'],
+                  Selasa: [
+                    'Tafsir (2)',
+                    'Nahwu (1)',
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                  ],
+                  Rabu: ['Shorof (1)', 'Hadits (3)', 'Tafsir (2)', 'Nahwu (1)'],
+                  Kamis: [
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                    'Nahwu (1)',
+                    'Shorof (1)',
+                  ],
+                  Jumat: ['Hadits (3)', 'Tafsir (2)', 'Fiqih (2)', 'Nahwu (1)'],
+                  Sabtu: [
+                    'Bahasa Arab (1)',
+                    'Shorof (1)',
+                    'Hadits (3)',
+                    'Tafsir (2)',
+                  ],
+                },
               )
             "
           >
@@ -197,13 +272,36 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item turats">
+        <div class="col-md-4 mb-4 guru-item Pengajar Wustha">
           <div
             class="guru-card"
             onclick="
               showDetail(
                 'Ade Faturrohman, A.Md.T',
                 'Pengajar Kitab Turats dan Umum',
+                {
+                  Senin: ['Nahwu (1)', 'Fiqih (2)', 'Shorof (1)', 'Hadits (3)'],
+                  Selasa: [
+                    'Tafsir (2)',
+                    'Nahwu (1)',
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                  ],
+                  Rabu: ['Shorof (1)', 'Hadits (3)', 'Tafsir (2)', 'Nahwu (1)'],
+                  Kamis: [
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                    'Nahwu (1)',
+                    'Shorof (1)',
+                  ],
+                  Jumat: ['Hadits (3)', 'Tafsir (2)', 'Fiqih (2)', 'Nahwu (1)'],
+                  Sabtu: [
+                    'Bahasa Arab (1)',
+                    'Shorof (1)',
+                    'Hadits (3)',
+                    'Tafsir (2)',
+                  ],
+                },
               )
             "
           >
@@ -215,13 +313,36 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item turats">
+        <div class="col-md-4 mb-4 guru-item Pengajar Ulya">
           <div
             class="guru-card"
             onclick="
               showDetail(
                 'Subchi Musyafa, S.H.',
                 'Pengajar Kitab Turats dan Umum',
+                {
+                  Senin: ['Nahwu (1)', 'Fiqih (2)', 'Shorof (1)', 'Hadits (3)'],
+                  Selasa: [
+                    'Tafsir (2)',
+                    'Nahwu (1)',
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                  ],
+                  Rabu: ['Shorof (1)', 'Hadits (3)', 'Tafsir (2)', 'Nahwu (1)'],
+                  Kamis: [
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                    'Nahwu (1)',
+                    'Shorof (1)',
+                  ],
+                  Jumat: ['Hadits (3)', 'Tafsir (2)', 'Fiqih (2)', 'Nahwu (1)'],
+                  Sabtu: [
+                    'Bahasa Arab (1)',
+                    'Shorof (1)',
+                    'Hadits (3)',
+                    'Tafsir (2)',
+                  ],
+                },
               )
             "
           >
@@ -233,13 +354,36 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item turats">
+        <div class="col-md-4 mb-4 guru-item Pengajar Ulya">
           <div
             class="guru-card"
             onclick="
               showDetail(
                 'Muhammad Saabiq Alwi, S.H.',
                 'Pengajar Kitab Turats dan Umum',
+                {
+                  Senin: ['Nahwu (1)', 'Fiqih (2)', 'Shorof (1)', 'Hadits (3)'],
+                  Selasa: [
+                    'Tafsir (2)',
+                    'Nahwu (1)',
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                  ],
+                  Rabu: ['Shorof (1)', 'Hadits (3)', 'Tafsir (2)', 'Nahwu (1)'],
+                  Kamis: [
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                    'Nahwu (1)',
+                    'Shorof (1)',
+                  ],
+                  Jumat: ['Hadits (3)', 'Tafsir (2)', 'Fiqih (2)', 'Nahwu (1)'],
+                  Sabtu: [
+                    'Bahasa Arab (1)',
+                    'Shorof (1)',
+                    'Hadits (3)',
+                    'Tafsir (2)',
+                  ],
+                },
               )
             "
           >
@@ -251,13 +395,36 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item turats">
+        <div class="col-md-4 mb-4 guru-item Pengajar Ulya">
           <div
             class="guru-card"
             onclick="
               showDetail(
                 'Muhammad Fajar Maulana Romadhon',
                 'Pengajar Kitab Turats dan Umum',
+                {
+                  Senin: ['Nahwu (1)', 'Fiqih (2)', 'Shorof (1)', 'Hadits (3)'],
+                  Selasa: [
+                    'Tafsir (2)',
+                    'Nahwu (1)',
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                  ],
+                  Rabu: ['Shorof (1)', 'Hadits (3)', 'Tafsir (2)', 'Nahwu (1)'],
+                  Kamis: [
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                    'Nahwu (1)',
+                    'Shorof (1)',
+                  ],
+                  Jumat: ['Hadits (3)', 'Tafsir (2)', 'Fiqih (2)', 'Nahwu (1)'],
+                  Sabtu: [
+                    'Bahasa Arab (1)',
+                    'Shorof (1)',
+                    'Hadits (3)',
+                    'Tafsir (2)',
+                  ],
+                },
               )
             "
           >
@@ -269,13 +436,36 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item turats">
+        <div class="col-md-4 mb-4 guru-item Pengajar Wustha">
           <div
             class="guru-card"
             onclick="
               showDetail(
                 'Syahrul Husni Mubarok, S.Pd.',
                 'Pengajar Kitab Turats dan Umum',
+                {
+                  Senin: ['Nahwu (1)', 'Fiqih (2)', 'Shorof (1)', 'Hadits (3)'],
+                  Selasa: [
+                    'Tafsir (2)',
+                    'Nahwu (1)',
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                  ],
+                  Rabu: ['Shorof (1)', 'Hadits (3)', 'Tafsir (2)', 'Nahwu (1)'],
+                  Kamis: [
+                    'Fiqih (2)',
+                    'Bahasa Arab (1)',
+                    'Nahwu (1)',
+                    'Shorof (1)',
+                  ],
+                  Jumat: ['Hadits (3)', 'Tafsir (2)', 'Fiqih (2)', 'Nahwu (1)'],
+                  Sabtu: [
+                    'Bahasa Arab (1)',
+                    'Shorof (1)',
+                    'Hadits (3)',
+                    'Tafsir (2)',
+                  ],
+                },
               )
             "
           >
@@ -287,11 +477,33 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item turats">
+        <div class="col-md-4 mb-4 guru-item Pengajar Wustha">
           <div
             class="guru-card"
             onclick="
-              showDetail('Fuad Ma\'ruf', 'Pengajar Kitab Turats dan Umum')
+              showDetail('Fuad Ma\'ruf', 'Pengajar Kitab Turats dan Umum', {
+                Senin: ['Nahwu (1)', 'Fiqih (2)', 'Shorof (1)', 'Hadits (3)'],
+                Selasa: [
+                  'Tafsir (2)',
+                  'Nahwu (1)',
+                  'Fiqih (2)',
+                  'Bahasa Arab (1)',
+                ],
+                Rabu: ['Shorof (1)', 'Hadits (3)', 'Tafsir (2)', 'Nahwu (1)'],
+                Kamis: [
+                  'Fiqih (2)',
+                  'Bahasa Arab (1)',
+                  'Nahwu (1)',
+                  'Shorof (1)',
+                ],
+                Jumat: ['Hadits (3)', 'Tafsir (2)', 'Fiqih (2)', 'Nahwu (1)'],
+                Sabtu: [
+                  'Bahasa Arab (1)',
+                  'Shorof (1)',
+                  'Hadits (3)',
+                  'Tafsir (2)',
+                ],
+              })
             "
           >
             <img src="assets/img/fuad.png" />
@@ -302,10 +514,34 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item quran">
+        <div class="col-md-4 mb-4 guru-item Pengajar Wustha">
           <div
             class="guru-card"
-            onclick="showDetail('Nur Halimah, S.Pd.', 'Pengajar Al-Qur\'an')"
+            onclick="
+              showDetail('Nur Halimah, S.Pd.', 'Pengajar Al-Qur\'an', {
+                Senin: ['Nahwu (1)', 'Fiqih (2)', 'Shorof (1)', 'Hadits (3)'],
+                Selasa: [
+                  'Tafsir (2)',
+                  'Nahwu (1)',
+                  'Fiqih (2)',
+                  'Bahasa Arab (1)',
+                ],
+                Rabu: ['Shorof (1)', 'Hadits (3)', 'Tafsir (2)', 'Nahwu (1)'],
+                Kamis: [
+                  'Fiqih (2)',
+                  'Bahasa Arab (1)',
+                  'Nahwu (1)',
+                  'Shorof (1)',
+                ],
+                Jumat: ['Hadits (3)', 'Tafsir (2)', 'Fiqih (2)', 'Nahwu (1)'],
+                Sabtu: [
+                  'Bahasa Arab (1)',
+                  'Shorof (1)',
+                  'Hadits (3)',
+                  'Tafsir (2)',
+                ],
+              })
+            "
           >
             <img src="assets/img/halimah.png" />
             <div class="guru-overlay">
@@ -315,10 +551,34 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item arab">
+        <div class="col-md-4 mb-4 guru-item Pengajar Wustha">
           <div
             class="guru-card"
-            onclick="showDetail('Inayatur Rohmah Roni', 'Pengajar Bahasa Arab')"
+            onclick="
+              showDetail('Inayatur Rohmah Roni', 'Pengajar Bahasa Arab', {
+                Senin: ['Nahwu (1)', 'Fiqih (2)', 'Shorof (1)', 'Hadits (3)'],
+                Selasa: [
+                  'Tafsir (2)',
+                  'Nahwu (1)',
+                  'Fiqih (2)',
+                  'Bahasa Arab (1)',
+                ],
+                Rabu: ['Shorof (1)', 'Hadits (3)', 'Tafsir (2)', 'Nahwu (1)'],
+                Kamis: [
+                  'Fiqih (2)',
+                  'Bahasa Arab (1)',
+                  'Nahwu (1)',
+                  'Shorof (1)',
+                ],
+                Jumat: ['Hadits (3)', 'Tafsir (2)', 'Fiqih (2)', 'Nahwu (1)'],
+                Sabtu: [
+                  'Bahasa Arab (1)',
+                  'Shorof (1)',
+                  'Hadits (3)',
+                  'Tafsir (2)',
+                ],
+              })
+            "
           >
             <img src="assets/img/ina.png" />
             <div class="guru-overlay">
@@ -328,11 +588,33 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item arab">
+        <div class="col-md-4 mb-4 guru-item Pengajar Wustha">
           <div
             class="guru-card"
             onclick="
-              showDetail('Umi Anifatul Khasanah', 'Pengajar Bahasa Arab')
+              showDetail('Umi Anifatul Khasanah', 'Pengajar Bahasa Arab', {
+                Senin: ['Nahwu (1)', 'Fiqih (2)', 'Shorof (1)', 'Hadits (3)'],
+                Selasa: [
+                  'Tafsir (2)',
+                  'Nahwu (1)',
+                  'Fiqih (2)',
+                  'Bahasa Arab (1)',
+                ],
+                Rabu: ['Shorof (1)', 'Hadits (3)', 'Tafsir (2)', 'Nahwu (1)'],
+                Kamis: [
+                  'Fiqih (2)',
+                  'Bahasa Arab (1)',
+                  'Nahwu (1)',
+                  'Shorof (1)',
+                ],
+                Jumat: ['Hadits (3)', 'Tafsir (2)', 'Fiqih (2)', 'Nahwu (1)'],
+                Sabtu: [
+                  'Bahasa Arab (1)',
+                  'Shorof (1)',
+                  'Hadits (3)',
+                  'Tafsir (2)',
+                ],
+              })
             "
           >
             <img src="assets/img/umi.png" />
@@ -343,10 +625,34 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item quran">
+        <div class="col-md-4 mb-4 guru-item Pengajar Wustha">
           <div
             class="guru-card"
-            onclick="showDetail('Nurul Aziain', 'Pengajar Al-Qur\'an')"
+            onclick="
+              showDetail('Nurul Aziain', 'Pengajar Al-Qur\'an', {
+                Senin: ['Nahwu (1)', 'Fiqih (2)', 'Shorof (1)', 'Hadits (3)'],
+                Selasa: [
+                  'Tafsir (2)',
+                  'Nahwu (1)',
+                  'Fiqih (2)',
+                  'Bahasa Arab (1)',
+                ],
+                Rabu: ['Shorof (1)', 'Hadits (3)', 'Tafsir (2)', 'Nahwu (1)'],
+                Kamis: [
+                  'Fiqih (2)',
+                  'Bahasa Arab (1)',
+                  'Nahwu (1)',
+                  'Shorof (1)',
+                ],
+                Jumat: ['Hadits (3)', 'Tafsir (2)', 'Fiqih (2)', 'Nahwu (1)'],
+                Sabtu: [
+                  'Bahasa Arab (1)',
+                  'Shorof (1)',
+                  'Hadits (3)',
+                  'Tafsir (2)',
+                ],
+              })
+            "
           >
             <img src="assets/img/nurul.png" />
             <div class="guru-overlay">
@@ -368,9 +674,12 @@
 
     <div class="modal fade" id="guruModal">
       <div class="modal-dialog">
-        <div class="modal-content p-4 text-center">
+        <div class="modal-content p-4">
           <h4 id="namaGuru"></h4>
           <p id="deskripsiGuru"></p>
+
+          <h5>Jadwal Mengajar</h5>
+          <div id="jadwalGuru"></div>
         </div>
       </div>
     </div>
@@ -378,25 +687,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-      // FILTER
-      function filterGuru(kategori) {
-        document.querySelectorAll(".guru-item").forEach((el) => {
-          el.style.display =
-            kategori === "all" || el.classList.contains(kategori)
-              ? "block"
-              : "none";
-        });
-
-        document.querySelectorAll(".filter-btn").forEach((btn) => {
-          btn.classList.remove("active");
-        });
-        event.target.classList.add("active");
-      }
-
-      // MODAL DETAIL
-      function showDetail(nama, desc) {
+      function showDetail(nama, desc, jadwal) {
         document.getElementById("namaGuru").innerText = nama;
         document.getElementById("deskripsiGuru").innerText = desc;
+
+        let html = `
+    <table class="table table-bordered text-center">
+      <thead>
+        <tr>
+          <th>Hari</th>
+          <th>Jam 1</th>
+          <th>Jam 2</th>
+          <th>Jam 3</th>
+          <th>Jam 4</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+
+        for (let hari in jadwal) {
+          html += "<tr>";
+          html += `<td><b>${hari}</b></td>`;
+
+          jadwal[hari].forEach((mapel) => {
+            html += `<td>${mapel}</td>`;
+          });
+
+          html += "</tr>";
+        }
+
+        html += "</tbody></table>";
+
+        document.getElementById("jadwalGuru").innerHTML = html;
 
         new bootstrap.Modal(document.getElementById("guruModal")).show();
       }
