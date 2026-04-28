@@ -1,0 +1,405 @@
+<!doctype html>
+
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tenaga Pendidik - PDF Anwaarunnajaah</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f8fffd;
+      }
+
+      /* HERO */
+      .hero {
+        height: 50vh;
+        background: linear-gradient(135deg, #00bfa6, #00796b);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      /* FILTER */
+      .filter-btn {
+        border: none;
+        background: #e0f2f1;
+        padding: 8px 20px;
+        border-radius: 20px;
+        margin: 5px;
+        cursor: pointer;
+      }
+
+      .filter-btn.active {
+        background: #00bfa6;
+        color: white;
+      }
+
+      /* CARD */
+      .guru-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+
+      .guru-card {
+        background: #f8fffd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 280px;
+      }
+
+      .guru-card img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+
+      .guru-card {
+        border-radius: 15px;
+        padding: 10px;
+      }
+
+      .guru-overlay {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 121, 107, 0.7);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 20px;
+        opacity: 0;
+        transition: 0.3s;
+      }
+
+      .guru-card:hover img {
+        transform: scale(1.1);
+      }
+
+      .guru-card:hover .guru-overlay {
+        opacity: 1;
+      }
+
+      /* BUTTON */
+      .btn-kembali {
+        background: linear-gradient(45deg, #00bfa6, #00796b);
+        color: white;
+        border-radius: 30px;
+        padding: 10px 25px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HERO -->
+
+    <div class="hero">
+      <div>
+        <h1>Tenaga Pendidik</h1>
+        <p>Profesional & Berpengalaman</p>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <!-- FILTER -->
+
+      <div class="text-center mb-4">
+        <button class="filter-btn active" onclick="filterGuru('all')">
+          Semua
+        </button>
+        <button class="filter-btn" onclick="filterGuru('quran')">
+          Al-Qur'an
+        </button>
+        <button class="filter-btn" onclick="filterGuru('arab')">
+          Bahasa Arab
+        </button>
+        <button class="filter-btn" onclick="filterGuru('turats')">
+          Kitab Turats
+        </button>
+      </div>
+
+      <div class="row" id="guruList">
+        <!-- GURU -->
+
+        <div class="col-md-4 mb-4 guru-item turats">
+          <div
+            class="guru-card"
+            onclick="
+              showDetail(
+                'Abah KH. Ahmad Ashif Dahri',
+                'Pengajar Kitab Turats dan Umum',
+              )
+            "
+          >
+            <img src="assets/img/ABAH.png" />
+            <div class="guru-overlay">
+              <h5>Ustadz Abah KH. Ahmad Ashif Dahri</h5>
+              <p>Kitab Turats</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 guru-item turats">
+          <div
+            class="guru-card"
+            onclick="
+              showDetail(
+                'Abah K. Itmamul Hamdi',
+                'Pengajar Kitab Turats dan Umum',
+              )
+            "
+          >
+            <img src="assets/img/ABAH ITMAM.png" />
+            <div class="guru-overlay">
+              <h5>Ustadz Abah K. Itmamul Hamdi</h5>
+              <p>Kitab Turats</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 guru-item turats">
+          <div
+            class="guru-card"
+            onclick="
+              showDetail(
+                'Abah K. Abdur Rosyid Karim',
+                'Pengajar Kitab Turats dan Umum',
+              )
+            "
+          >
+            <img src="assets/img/ABAH ROSYID.png" />
+            <div class="guru-overlay">
+              <h5>Ustadz Abah K. Abdur Rosyid Karim</h5>
+              <p>Kitab Turats</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 guru-item turats">
+          <div
+            class="guru-card"
+            onclick="
+              showDetail(
+                'Ade Faturrohman, A.Md.T',
+                'Pengajar Kitab Turats dan Umum',
+              )
+            "
+          >
+            <img src="assets/img/ade.png" />
+            <div class="guru-overlay">
+              <h5>Ustadz Ade Faturrohman, A.Md.T</h5>
+              <p>Kitab Turats</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 guru-item turats">
+          <div
+            class="guru-card"
+            onclick="
+              showDetail(
+                'Subchi Musyafa, S.H.',
+                'Pengajar Kitab Turats dan Umum',
+              )
+            "
+          >
+            <img src="assets/img/subchi.png" />
+            <div class="guru-overlay">
+              <h5>Ustadz Subchi Musyafa, S.H.</h5>
+              <p>Kitab Turats</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 guru-item turats">
+          <div
+            class="guru-card"
+            onclick="
+              showDetail(
+                'Muhammad Saabiq Alwi, S.H.',
+                'Pengajar Kitab Turats dan Umum',
+              )
+            "
+          >
+            <img src="assets/img/saabiq.png" />
+            <div class="guru-overlay">
+              <h5>Ustadz Muhammad Saabiq Alwi, S.H.</h5>
+              <p>Kitab Turats</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 guru-item turats">
+          <div
+            class="guru-card"
+            onclick="
+              showDetail(
+                'Muhammad Fajar Maulana Romadhon',
+                'Pengajar Kitab Turats dan Umum',
+              )
+            "
+          >
+            <img src="assets/img/fajar.png" />
+            <div class="guru-overlay">
+              <h5>Ustadz Muhammad Fajar Maulana Romadhon</h5>
+              <p>Kitab Turats</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 guru-item turats">
+          <div
+            class="guru-card"
+            onclick="
+              showDetail(
+                'Syahrul Husni Mubarok, S.Pd.',
+                'Pengajar Kitab Turats dan Umum',
+              )
+            "
+          >
+            <img src="assets/img/syahrul.png" />
+            <div class="guru-overlay">
+              <h5>Ustadz Syahrul Husni Mubarok, S.Pd.</h5>
+              <p>Kitab Turats</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 guru-item turats">
+          <div
+            class="guru-card"
+            onclick="
+              showDetail('Fuad Ma\'ruf', 'Pengajar Kitab Turats dan Umum')
+            "
+          >
+            <img src="assets/img/fuad.png" />
+            <div class="guru-overlay">
+              <h5>Ustadz Fuad Ma\'ruf</h5>
+              <p>Kitab Turats</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 guru-item quran">
+          <div
+            class="guru-card"
+            onclick="showDetail('Nur Halimah, S.Pd.', 'Pengajar Al-Qur\'an')"
+          >
+            <img src="assets/img/halimah.png" />
+            <div class="guru-overlay">
+              <h5>Ustadzah Nur Halimah, S.Pd.</h5>
+              <p>Al-Qur'an</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 guru-item arab">
+          <div
+            class="guru-card"
+            onclick="showDetail('Inayatur Rohmah Roni', 'Pengajar Bahasa Arab')"
+          >
+            <img src="assets/img/ina.png" />
+            <div class="guru-overlay">
+              <h5>Ustadz Inayatur Rohmah Roni</h5>
+              <p>Bahasa Arab</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 guru-item arab">
+          <div
+            class="guru-card"
+            onclick="
+              showDetail('Umi Anifatul Khasanah', 'Pengajar Bahasa Arab')
+            "
+          >
+            <img src="assets/img/umi.png" />
+            <div class="guru-overlay">
+              <h5>Ustadz Umi Anifatul Khasanah</h5>
+              <p>Bahasa Arab</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 guru-item quran">
+          <div
+            class="guru-card"
+            onclick="showDetail('Nurul Aziain', 'Pengajar Al-Qur\'an')"
+          >
+            <img src="assets/img/nurul.png" />
+            <div class="guru-overlay">
+              <h5>Ustadz Nurul Aziain</h5>
+              <p>Al-Qur'an</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BUTTON -->
+
+      <div class="text-center mb-5">
+        <a href="index.html" class="btn btn-kembali">← Kembali</a>
+      </div>
+    </div>
+
+    <!-- MODAL -->
+
+    <div class="modal fade" id="guruModal">
+      <div class="modal-dialog">
+        <div class="modal-content p-4 text-center">
+          <h4 id="namaGuru"></h4>
+          <p id="deskripsiGuru"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // FILTER
+      function filterGuru(kategori) {
+        document.querySelectorAll(".guru-item").forEach((el) => {
+          el.style.display =
+            kategori === "all" || el.classList.contains(kategori)
+              ? "block"
+              : "none";
+        });
+
+        document.querySelectorAll(".filter-btn").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+        event.target.classList.add("active");
+      }
+
+      // MODAL DETAIL
+      function showDetail(nama, desc) {
+        document.getElementById("namaGuru").innerText = nama;
+        document.getElementById("deskripsiGuru").innerText = desc;
+
+        new bootstrap.Modal(document.getElementById("guruModal")).show();
+      }
+    </script>
+  </body>
+</html>
