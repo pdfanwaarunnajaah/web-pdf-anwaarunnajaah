@@ -114,6 +114,11 @@
         background: #00bfa6;
         color: white;
       }
+      .table td,
+      .table th {
+        font-size: 12px;
+        padding: 6px;
+      }
     </style>
   </head>
 
@@ -134,10 +139,10 @@
         <button class="filter-btn active" onclick="filterGuru('all')">
           Semua
         </button>
-        <button class="filter-btn" onclick="filterGuru('Pengajar Ulya')">
+        <button class="filter-btn" onclick="filterGuru('ulya')">
           Pengajar Ulya
         </button>
-        <button class="filter-btn" onclick="filterGuru('Pengajar Wustha')">
+        <button class="filter-btn" onclick="filterGuru('wustha')">
           Pengajar Wustha
         </button>
       </div>
@@ -145,7 +150,7 @@
       <div class="row" id="guruList">
         <!-- GURU -->
 
-        <div class="col-md-4 mb-4 guru-item Pengajar Ulya">
+        <div class="col-md-4 mb-4 guru-item ulya">
           <div
             class="guru-card"
             onclick="
@@ -186,7 +191,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item Pengajar Ulya">
+        <div class="col-md-4 mb-4 guru-item ulya">
           <div
             class="guru-card"
             onclick="
@@ -227,7 +232,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item Pengajar Ulya">
+        <div class="col-md-4 mb-4 guru-item ulya">
           <div
             class="guru-card"
             onclick="
@@ -268,7 +273,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item Pengajar Wustha">
+        <div class="col-md-4 mb-4 guru-item wustha">
           <div
             class="guru-card"
             onclick="
@@ -309,7 +314,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item Pengajar Ulya">
+        <div class="col-md-4 mb-4 guru-item ulya">
           <div
             class="guru-card"
             onclick="
@@ -350,7 +355,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item Pengajar Ulya">
+        <div class="col-md-4 mb-4 guru-item ulya">
           <div
             class="guru-card"
             onclick="
@@ -391,7 +396,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item Pengajar Ulya">
+        <div class="col-md-4 mb-4 guru-item ulya">
           <div
             class="guru-card"
             onclick="
@@ -432,7 +437,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item Pengajar Wustha">
+        <div class="col-md-4 mb-4 guru-item wustha">
           <div
             class="guru-card"
             onclick="
@@ -473,7 +478,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item Pengajar Wustha">
+        <div class="col-md-4 mb-4 guru-item wustha">
           <div
             class="guru-card"
             onclick="
@@ -510,7 +515,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item Pengajar Wustha">
+        <div class="col-md-4 mb-4 guru-item ulya">
           <div
             class="guru-card"
             onclick="
@@ -547,7 +552,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item Pengajar Wustha">
+        <div class="col-md-4 mb-4 guru-item wustha">
           <div
             class="guru-card"
             onclick="
@@ -584,7 +589,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item Pengajar Wustha">
+        <div class="col-md-4 mb-4 guru-item wustha">
           <div
             class="guru-card"
             onclick="
@@ -621,7 +626,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 mb-4 guru-item Pengajar Wustha">
+        <div class="col-md-4 mb-4 guru-item wustha">
           <div
             class="guru-card"
             onclick="
@@ -688,7 +693,9 @@
         document.getElementById("deskripsiGuru").innerText = desc;
 
         let html = `
-    <table class="table table-bordered text-center">
+<div class="table-responsive">
+  <table class="table table-bordered text-center">
+    
       <thead>
         <tr>
           <th>Hari</th>
@@ -712,11 +719,27 @@
           html += "</tr>";
         }
 
-        html += "</tbody></table>";
+        html += "</tbody></table></div>";
 
         document.getElementById("jadwalGuru").innerHTML = html;
 
         new bootstrap.Modal(document.getElementById("guruModal")).show();
+      }
+
+      function filterGuru(kategori) {
+        document.querySelectorAll(".guru-item").forEach((el) => {
+          if (kategori === "all" || el.classList.contains(kategori)) {
+            el.style.display = "block";
+          } else {
+            el.style.display = "none";
+          }
+        });
+
+        // efek tombol aktif
+        document.querySelectorAll(".filter-btn").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+        event.target.classList.add("active");
       }
     </script>
   </body>
