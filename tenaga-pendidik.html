@@ -129,6 +129,9 @@
         opacity: 1;
         transform: translateY(0);
       }
+      .guru-card:hover .guru-overlay {
+        opacity: 1;
+      }
     </style>
   </head>
 
@@ -753,16 +756,24 @@
       }
     </script>
     <script>
-      window.addEventListener("scroll", function () {
-        let elements = document.querySelectorAll(".reveal");
+      document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active"); // muncul
+              } else {
+                entry.target.classList.remove("active"); // hilang
+              }
+            });
+          },
+          {
+            threshold: 0.2,
+          },
+        );
 
-        elements.forEach((el) => {
-          let windowHeight = window.innerHeight;
-          let elementTop = el.getBoundingClientRect().top;
-
-          if (elementTop < windowHeight - 100) {
-            el.classList.add("active");
-          }
+        document.querySelectorAll(".reveal").forEach((el) => {
+          observer.observe(el);
         });
       });
     </script>
