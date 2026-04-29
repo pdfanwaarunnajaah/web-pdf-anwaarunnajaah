@@ -118,59 +118,6 @@
       .nav-pills .nav-link.active {
         box-shadow: 0 0 10px rgba(0, 191, 166, 0.6);
       }
-      /* BACKGROUND PREMIUM ISLAMI */
-      body {
-        font-family: "Poppins", sans-serif;
-        background: linear-gradient(-45deg, #e6fffa, #ccfbf1, #b2f5ea, #f0fdfa);
-        background-size: 400% 400%;
-        animation: gradientMove 18s ease infinite;
-      }
-
-      /* ANIMASI HALUS */
-      @keyframes gradientMove {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-      /* EFEK CAHAYA HALUS */
-      body::before {
-        content: "";
-        position: fixed;
-        width: 200%;
-        height: 200%;
-        top: -50%;
-        left: -50%;
-        background: radial-gradient(
-          circle,
-          rgba(255, 255, 255, 0.4),
-          transparent 70%
-        );
-        animation: moveLight 20s linear infinite;
-        z-index: -1;
-      }
-
-      @keyframes moveLight {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-      section {
-        background: transparent;
-      }
-      @media (max-width: 768px) {
-        body {
-          animation: gradientMove 25s ease infinite;
-        }
-      }
     </style>
   </head>
 
