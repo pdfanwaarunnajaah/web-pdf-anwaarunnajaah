@@ -121,47 +121,45 @@
         position: fixed;
         bottom: 20px;
         right: 20px;
+
+        width: 50px;
+        height: 50px;
+
         background: #25d366;
         color: white;
-        padding: 12px 18px;
-        border-radius: 50px;
+
+        border-radius: 50%;
         display: flex;
         align-items: center;
-        gap: 8px;
+        justify-content: center;
+
+        font-size: 24px;
+
         text-decoration: none;
-        font-weight: 500;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         z-index: 999;
+
         transition: 0.3s;
       }
 
-      .wa-float i {
-        font-size: 20px;
-      }
-
       .wa-float:hover {
+        transform: scale(1.1);
         background: #1ebe5d;
-        transform: scale(1.05);
       }
 
       .wa-float {
-        animation: pulseWA 2s infinite;
+        animation: floatWA 2s infinite;
       }
 
-      @keyframes pulseWA {
-        0% {
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-        }
-
-        70% {
-          box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-        }
-
+      @keyframes floatWA {
+        0%,
         100% {
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
         }
       }
-
       .social-footer {
         display: flex !important;
         flex-direction: row !important;
@@ -354,6 +352,32 @@
         body::before {
           height: 150px;
         }
+      }
+      #kalender iframe {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .calendar-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 75%; /* rasio tinggi */
+        height: 0;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .calendar-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      /* perbagus tampilan kalender pendidikan */
+      .card {
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
       }
     </style>
   </head>
@@ -634,6 +658,21 @@
         </div>
       </div>
     </section>
+    <section id="kalender">
+      <div class="container text-center">
+        <h2>Kalender Pendidikan</h2>
+        <p class="mb-4">Jadwal kegiatan akademik santri selama satu tahun</p>
+
+        <div class="calendar-wrapper">
+          <iframe
+            src="https://calendar.google.com/calendar/embed?src=pdfanwaarunnajaah%40gmail.com&ctz=Asia%2FJakarta"
+            style="border: 0"
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
 
     <!-- TESTIMONI -->
     <section>
@@ -766,12 +805,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <a
-      href="https://wa.me/6288991346027?text=Halo%20saya%20ingin%20bertanya%20tentang%20pendaftaran"
+      href="https://wa.me/6288991346027?text=Halo%20saya%20ingin%20bertanya"
       class="wa-float"
       target="_blank"
     >
       <i class="bi bi-whatsapp"></i>
-      <span>Tanya di WhatsApp?</span>
     </a>
     <script>
       document.querySelectorAll(".nav-link").forEach((link) => {
